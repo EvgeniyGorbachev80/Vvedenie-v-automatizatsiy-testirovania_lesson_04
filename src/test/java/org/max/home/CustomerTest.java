@@ -5,7 +5,7 @@ import org.hibernate.query.Query;
 import org.junit.jupiter.api.*;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
-import org.max.seminar.CurrentEntity;
+
 
 import javax.persistence.PersistenceException;
 import java.sql.ResultSet;
@@ -30,8 +30,8 @@ public class CustomerTest extends AbstractTest{
         }
         final Query query = getSession().createSQLQuery("SELECT * FROM customers").addEntity(CustomersEntity.class);
         //then
-        Assertions.assertEquals(8, countTableSize);
-        Assertions.assertEquals(15, query.list().size());
+        Assertions.assertEquals(9, countTableSize);
+        Assertions.assertEquals(16, query.list().size());
     }
 
     @Order(2)
